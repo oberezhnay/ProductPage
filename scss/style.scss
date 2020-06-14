@@ -1,0 +1,100 @@
+@import "../scss/custom.scss";
+
+@import "../scss/bootstrap/bootstrap";
+// @import "../scss/bootstrap/variables";
+// @import "../scss/bootstrap/mixins";
+
+// @import "../scss/bootstrap/reboot";
+// @import "../scss/bootstrap/type";
+// @import "../scss/bootstrap/images";
+// @import "../scss/bootstrap/code";
+// @import "../scss/bootstrap/grid";
+
+//////header
+
+.header{
+    margin-left: 0;
+    font-size: 13px;
+    a{
+        color: black;
+        &:hover{
+            color: #ff3801;
+            text-decoration: none;
+        }
+    }
+    &__top{
+        align-items: center;
+        border-bottom: 1px solid #ebedee;
+    }
+    &__button{
+        border: 1px solid #ebedee;
+        font-weight: 500;
+        &:before{
+            content:'';
+            display: inline-block;
+            vertical-align: middle;
+            width: 17px;
+            height: 17px;
+}
+        &-enter:before{
+            background: url("../images/logIn-btn.png") 0 0 no-repeat;
+        }
+        &-wishlist:before{
+            background: url("../images/wishlist-btn.png") 0 0 no-repeat;
+        }
+        &-cart{
+            background-color: #ff3801;
+            color: #fff;
+            &:before{
+                background: url("../images/busket-btn.png") 0 0 no-repeat;
+            }
+        }
+    }
+    &__phone{
+        font-size: 18px;
+        &-callback span{
+            color: #fff;
+            font-size: 12px;
+            background-color: #89c238;
+            padding: 8px 12px 10px 15px;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+        }
+    }
+    &__search{
+        position: relative;
+        &-input{
+            padding-left: 30px;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+}
+        &-btn{
+            position: absolute;
+            background-color: transparent;
+            left: 0;
+            border: none;
+            &:before{
+                content:'';
+                display: inline-block;
+                vertical-align: middle;
+                width: 17px;
+                height: 17px;
+                background: url("../images/search.png") 0 0 no-repeat;
+            }
+            // &:after{
+            //     content:'';
+            //     display: inline-block;
+            //     vertical-align: middle;
+            //     width: 17px;
+            //     height: 17px;
+            //     background: url("../images/search.png") 0 0 no-repeat;
+            // }
+        }
+    }
+}
