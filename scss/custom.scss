@@ -6,6 +6,23 @@ $grid-breakpoints: (
   xs: 0,
   sm: 320px,
   md: 768px,
-  lg: 992px,
+  lg: 1000px,
   xl: 1600px
 );
+
+$container-max-widths: (
+  sm: 767px,
+  md: 999px,
+  lg: 1599px,
+  // xl: 1600px
+);
+
+.navbar-toggler{
+  color: black;
+}
+
+@media (max-width: 1000px){
+  .container{
+    width: 100%;
+  }
+}

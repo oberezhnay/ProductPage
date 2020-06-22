@@ -1,6 +1,8 @@
 @import "../scss/custom.scss";
 
 @import "../scss/bootstrap/bootstrap";
+
+@import url('http://fonts.googleapis.com/css?family=Lato|Raleway');
 // @import "../scss/bootstrap/variables";
 // @import "../scss/bootstrap/mixins";
 
@@ -11,21 +13,22 @@
 // @import "../scss/bootstrap/grid";
 
 //////header
+body{
+    font-family: "Lato";
+}
+
+a{
+    color: black !important;
+    flex-wrap: nowrap;
+    &:hover{
+        color: #ff3801 !important;
+        text-decoration: none;
+    }
+}
 
 .header{
     margin-left: 0;
     font-size: 13px;
-    a{
-        color: black;
-        &:hover{
-            color: #ff3801;
-            text-decoration: none;
-        }
-    }
-    &__top{
-        align-items: center;
-        border-bottom: 1px solid #ebedee;
-    }
     &__button{
         border: 1px solid #ebedee;
         font-weight: 500;
@@ -35,7 +38,7 @@
             vertical-align: middle;
             width: 17px;
             height: 17px;
-}
+        }
         &-enter:before{
             background: url("../images/logIn-btn.png") 0 0 no-repeat;
         }
@@ -64,20 +67,26 @@
             -o-border-radius: 2px;
         }
     }
+    &__logo{
+        text-align: center;
+    }
     &__search{
         position: relative;
         &-input{
-            padding-left: 30px;
+            padding-left: 1.8rem;
+            height: 30px;
             border-radius: 30px;
             -webkit-border-radius: 30px;
             -moz-border-radius: 30px;
             -ms-border-radius: 30px;
             -o-border-radius: 30px;
-}
+            border: 1px solid #dee1e3;
+        }       
         &-btn{
             position: absolute;
             background-color: transparent;
             left: 0;
+            top: 5px;
             border: none;
             &:before{
                 content:'';
@@ -87,14 +96,64 @@
                 height: 17px;
                 background: url("../images/search.png") 0 0 no-repeat;
             }
-            // &:after{
-            //     content:'';
-            //     display: inline-block;
-            //     vertical-align: middle;
-            //     width: 17px;
-            //     height: 17px;
-            //     background: url("../images/search.png") 0 0 no-repeat;
-            // }
         }
     }
 }
+.menu{
+    border-top: 1px solid #ebedee;
+    border-bottom: 1px solid #ebedee;
+    padding-left: 0;
+    &__nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-item{
+            font-size: 16px;;
+        }
+    }
+}
+.navbar-toggler{
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+@media(max-width: 320px){
+    .header{
+        &__menu{
+            display: none;
+        }
+        &__phone{
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            margin-top: 0.25rem !important;
+            margin-bottom: 0.25rem !important;
+            &-callback span{
+                font-size: 12px;
+                padding: 8px 12px 6px 15px;
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+            }
+        }
+        &__search, &__button-enter, &__button-wishlist{
+            display: none;
+        }   
+    }
+    .menu{
+        width: 16.8%;
+    }
+}
+
+
+

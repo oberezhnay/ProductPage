@@ -9,63 +9,98 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container pr-0">
         <header class="header">
-            <div class="header__top">
-                <div class="row">
-                    <div class="col">
-                        <nav class="header__menu-list nav nav-inline">
-                            <a class="header__menu-item p-2" href="#">О магазине</a>
-                            <a class="header__menu-item p-2" href="#">Baby клуб</a>
-                            <a class="header__menu-item p-2" href="#">Доставка и оплата</a>
-                            <a class="header__menu-item p-2" href="#">Новости</a>
-                            <a class="header__menu-item p-2" href="#">Контакты</a>
-                        </nav>
-                    </div>
-                    <div class="col">
-                        <div class="header__buttons d-flex justify-content-end">
-                            <div class="header__button header__button-enter  p-2">
-                                <span class="header__button-text">Вход</span>
-                            </div>
-                            <div class="header__button header__button-wishlist p-2">
-                                <span class="header__button-icon"></span>
-                                <span class="header__button-text">Избранное</span>
-                            </div>
-                            <div class="header__button header__button-cart cart p-2">
-                                <span class="header__button-icon"></span>
-                                <span class="header__button-text">Корзина
-                                    <span class="button__cart-counter">(0)</span>
-                                </span>
-                            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                    <nav class="header__menu nav nav-inline flex-nowrap">
+                        <a class="header__menu-item p-2" href="#">О магазине</a>
+                        <a class="header__menu-item p-2" href="#">Baby клуб</a>
+                        <a class="header__menu-item p-2" href="#">Доставка и оплата</a>
+                        <a class="header__menu-item p-2" href="#">Новости</a>
+                        <a class="header__menu-item p-2" href="#">Контакты</a>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-xl-6 order-last order-lg-0">
+                    <div class="header__buttons d-flex justify-content-end">
+                        <div class="header__button header__button-enter  p-2">
+                            <span class="header__button-text d-none d-lg-inline">Вход</span>
+                        </div>
+                        <div class="header__button header__button-wishlist p-2">
+                            <span class="header__button-icon"></span>
+                            <span class="header__button-text d-none d-lg-inline">Избранное</span>
+                        </div>
+                        <div class="header__button header__button-cart cart p-2">
+                            <span class="header__button-icon"></span>
+                            <span class="header__button-text d-none d-lg-inline">Корзина
+                                <span class="button__cart-counter d-md-none" style="color:#ebe26a">(2)</span>
+                            </span>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="header__bottom">
-                <div class="row flex-nowrap justify-content-between align-items-center">
-                    <div class="col">
-                        <div class="header__phone">
-                            <div class="header__phone-numbers">
-                                <a href="tel: +30445938239">(044) 593 82 39</a>
-                                <a href="tel: 0800507712">0 (800) 50 77 12</a>
-                            </div>
-                            <div class="header__phone-callback">
-                                <span>Обратный звонок</span>
-                            </div>
-                        </div>
+                <div class="header__phone col-md-6 col-lg-4 col-xl-4 pt-5 pb-5 order-1 order-lg-0">
+                    <div class="header__phone-numbers">
+                        <a href="tel: +30445938239">(044) 593 82 39</a>
+                        <a href="tel: 0800507712">0 800 50 77 12</a>
                     </div>
-                    <div class="col">
-                        <a href="https://panama.ua/" class="header__logo">
-                            <img src="/images/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="col-2 d-flex justify-content-end">
-                        <form action="/search/" class="header__search">
-                            <input type="text" class="header__search-input" placeholder="Поиск">
-                            <button type="submit" class="header__search-btn"></button>
-                        </form>
+                    <div class="header__phone-callback">
+                        <span class="d-none d-sm-inline">Обратный звонок</span>
+                        <span class="d-inline d-sm-none">Callback</span>
                     </div>
                 </div>
+                <div class="col-lg-4 col-xl-4 pt-5 pb-5 header__logo order-4 order-lg-0">
+                    <a href="https://panama.ua/" class="header__logo-link">
+                        <picture>
+                            <source media="(max-width: 465px)" srcset="/images/logo-sm.png">
+                            <img src="/images/logo.png" alt="Logo">
+                          </picture>
+                        <!-- <img src="/images/logo.png" alt=""> -->
+                    </a>
+                </div>
+                <div class="col-lg-4 col-xl-4  pt-5 pb-5 d-flex justify-content-end order-3 order-lg-0">
+                    <form action="/search/" class="header__search">
+                        <input type="text" class="header__search-input" placeholder="Поиск">
+                        <button type="submit" class="header__search-btn"></button>
+                    </form>
+                </div>
+                <div class="col-lg-12 col-xl-12 menu order-2 order-lg-0">
+                    <nav class="menu__list navbar navbar-expand-lg p-0 navbar-light ">
+                        <button class="navbar-toggler d-xl-none" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav menu__nav">
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu-item nav-link p-0">Игры и Игрушки</a>
+                                </li>
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu__item nav-link" href="#">Школа и Творчество</a>
+                                </li>
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu__item nav-link" href="#">Одежда</a>
+                                </li>
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu__item nav-link" href="#">Обувь</a>
+                                </li>
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu__item nav-link" href="#">Кухня и кормление</a>
+                                </li>
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu__item nav-link" href="#">Гигиена и уход</a>
+                                </li>
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu__item nav-link" href="#">Спорт и отдых</a>
+                                </li>
+                                <li class="menu__nav-item pt-3 pb-3">
+                                    <a class="menu__item nav-link p-0" href="#">Детская и коляски</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+
             </div>
         </header>
     </div>

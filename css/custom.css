@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=custom.css.map */
+.navbar-toggler {
+  color: black;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=custom.css.map */
