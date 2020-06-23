@@ -109,7 +109,7 @@ a{
         justify-content: space-between;
         align-items: center;
         &-item{
-            font-size: 16px;;
+            font-size: 16px;
         }
     }
 }
@@ -123,11 +123,9 @@ a{
     -ms-border-radius: 0;
     -o-border-radius: 0;
 }
+
 @media(max-width: 320px){
     .header{
-        &__menu{
-            display: none;
-        }
         &__phone{
             font-size: 14px;
             display: flex;
@@ -136,6 +134,9 @@ a{
             padding-bottom: 0 !important;
             margin-top: 0.25rem !important;
             margin-bottom: 0.25rem !important;
+            a{
+                margin: 0 0 0 7px;
+            }
             &-callback span{
                 font-size: 12px;
                 padding: 8px 12px 6px 15px;
@@ -146,14 +147,52 @@ a{
                 -o-border-radius: 0;
             }
         }
-        &__search, &__button-enter, &__button-wishlist{
+        &__buttons{
+            width: 16.8%;
+            display: flex;            
+        }
+        &__button-cart{
+            background-color: #fff;
+            border: none;
+            border-top: 1px solid #ebedee;
+            border-bottom: 1px solid #ebedee;
+            &:before{
+                vertical-align: middle;
+                width: 25px;
+                height: 25px;
+                background: url("../images/busket-btn-red.png") no-repeat 50%;
+            }
+        }
+        &__logo{
+            width: 64.2%;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.3rem !important;
+            border: 1px solid #ebedee;
+
+        }
+        &__menu, &__button-enter, &__button-wishlist{
             display: none;
-        }   
+        }
+    }
+    .navbar-toggler{
+        border: none;
     }
     .menu{
+        padding-top: 0.5rem;
         width: 16.8%;
     }
 }
 
+@media(max-width: 1000px){
+    .header{
+        &__phone{
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1rem !important;
+            padding-bottom: 0.5rem !important;
+        }
+    }            
+}
 
 

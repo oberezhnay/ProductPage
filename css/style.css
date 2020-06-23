@@ -10954,9 +10954,6 @@ a:hover {
 }
 
 @media (max-width: 320px) {
-  .header__menu {
-    display: none;
-  }
   .header__phone {
     font-size: 14px;
     display: -webkit-box;
@@ -10970,6 +10967,9 @@ a:hover {
     margin-top: 0.25rem !important;
     margin-bottom: 0.25rem !important;
   }
+  .header__phone a {
+    margin: 0 0 0 7px;
+  }
   .header__phone-callback span {
     font-size: 12px;
     padding: 8px 12px 6px 15px;
@@ -10979,11 +10979,53 @@ a:hover {
     -ms-border-radius: 0;
     -o-border-radius: 0;
   }
-  .header__search, .header__button-enter, .header__button-wishlist {
+  .header__buttons {
+    width: 16.8%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__button-cart {
+    background-color: #fff;
+    border: none;
+    border-top: 1px solid #ebedee;
+    border-bottom: 1px solid #ebedee;
+  }
+  .header__button-cart:before {
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    background: url("../images/busket-btn-red.png") no-repeat 50%;
+  }
+  .header__logo {
+    width: 64.2%;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.3rem !important;
+    border: 1px solid #ebedee;
+  }
+  .header__menu, .header__button-enter, .header__button-wishlist {
     display: none;
   }
+  .navbar-toggler {
+    border: none;
+  }
   .menu {
+    padding-top: 0.5rem;
     width: 16.8%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header__phone {
+    font-size: 14px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
